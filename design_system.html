@@ -4,12 +4,457 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            margin: 3em 7em; 
+            font-family: "Red Hat Display", sans-serif;
+            font-size: 1rem;
+            /* font-weight: 500; */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: var(--clr-slate-300);
+            font-weight: 900;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+
+        .section__number {
+            font-weight: 900;
+            color: var(--clr-slate-600);
+            font-size: 1rem;
+            border: 2px solid var(--clr-slate-300);
+            border-radius: 100px;
+            padding: 1rem;
+            margin-inline-end: 1.5em;
+        }
+
+        h3 {
+            color: var(--clr-slate-600)
+        }
+
+        .wrapper__color {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem; 
+            padding-block-start: 1rem;
+            border-top: 2px solid var(--clr-slate-300);
+        }
+
+        .color__container {
+            width: 100%;
+            height: 6em;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+
+        .color__name {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+        }
+
+        .dark__text {
+            color: var(--clr-slate-900);
+            font-weight: 900;
+        }
+
+        .light__text {
+            color: var(--clr-white);
+            font-weight: 900;
+        }
+
+        .grey__text {
+            color: var(--clr-slate-300);
+            font-weight: 500;
+            margin-inline-end: 2rem;
+        }
+
+        .cyan-600 {
+            background-color: var(--clr-cyan-600);
+        }
+
+        .cyan-300 {
+            background-color: var(--clr-cyan-300);
+        }
+
+        .purple-600 {
+            background-color: var(--clr-purple-600);
+        }
+
+        .purple-300 {
+            background-color: var(--clr-purple-300);
+        }  
         
+        .slate-900 {
+            background-color: var(--clr-slate-900);
+        }
+
+        .slate-600 {
+            background-color: var(--clr-slate-600);
+        }
+
+        .slate-300 {
+            background-color: var(--clr-slate-300);
+        }
+
+        .white {
+            background-color: var(--clr-white);
+            border: 2px solid var(--clr-slate-300);
+        }
+
+        .section__number {
+            margin-block: 4.5rem 4rem;
+        }
+
+        .wrapper__typo {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem; 
+        }
+
+        .text-preset-title {
+            color: var(--clr-slate-600);
+        }
+
+        .text-preset-data {
+            color: var(--clr-slate-600);
+            font-weight: 500;
+        }
+
+        .wrapper__space {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between; 
+        }
+
+        .spacing-1400 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-1400);
+        }
+
+        .spacing-1000 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-1000);
+        }
+
+        .spacing-900 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-900);
+        }
+
+        .spacing-800 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-800);
+        }
+
+        .spacing-700 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-700);
+        }
+        
+        .spacing-500 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-500);
+        }
+
+        .spacing-400 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-400);
+        }
+
+        .spacing-300 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-300);
+        }
+
+        .spacing-200 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-200);
+        }
+
+        .spacing-100 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-100);
+        }
+
+        .spacing-50 {
+            width: 0;
+            height: 4em;
+            background-color: var(--clr-slate-300);
+            padding-inline: var(--spacing-50);
+        }
+
+        .spacing-item span:nth-child(1) {
+            font-weight: 500;
+            color: var(--clr-slate-600);
+        }
+
+        .spacing-item span:nth-child(2) {
+            font-weight: 500;
+            color: var(--clr-slate-900);
+        }
+
+        .wrapper__components {
+            display: flex;
+            gap:2rem;
+        }
+
+        .component {
+            display: flex;
+            width: 15em;
+            height: 12em;
+            border: 2px dashed #9747FF;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
     </style>  
 </head>
 <body>
-    
+    <header class="header">
+        <img src="assets/logo.svg" alt="Logo">
+        <h1>Style Guide</h1>
+    </header>
+    <main>
+        <!-- Color Palette -->
+        <section>
+            <h2><span class="section__number">01</span> Colors</h2> 
+            <h3>Cyan</h3>
+            <div class="wrapper__color">
+                <div class="color">
+                    <div class="cyan-600 color__container";><span class="color__name light__text">Cyan-600</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #4D96A9</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 77, 150, 168</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 192, 37%, 48%</p>
+                    </div>
+                </div>
+                <div class="color">
+                    <div class="cyan-300 color__container";><span class="color__name dark__text">Cyan-300</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #8FE3F9</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 143, 277, 249</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 192, 90%, 77%</p>
+                    </div>
+                </div>
+            </div>  
+            <h3>Purple</h3>
+            <div class="wrapper__color">
+                <div class="color">
+                    <div class="purple-600 color__container";><span class="color__name light__text">Purple-600</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #855FB1</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 133, 95, 177</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 268, 34%, 53%</p>
+                    </div>
+                </div>
+                <div class="color">
+                    <div class="purple-300 color__container";><span class="color__name dark__text">Purple-300</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #D9B8FF</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 217, 184, 255</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 268, 100%, 86%</p>
+                    </div>
+                </div>
+            </div>  
+             <h3>Slate</h3>
+            <div class="wrapper__color">
+                <div class="color">
+                    <div class="slate-900 color__container";><span class="color__name light__text">Slate-900</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #28283D</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 40, 40, 61</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 240, 21%, 20%</p>
+                    </div>
+                </div>
+                <div class="color">
+                    <div class="slate-600 color__container";><span class="color__name light__text">Slate-600</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #87879D</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 135, 135, 157</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 240, 10%, 57%</p>
+                    </div>
+                </div>
+                <div class="color">
+                    <div class="slate-300 color__container";><span class="color__name dark__text">Slate-300</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #D1D1DF</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 209, 209, 223</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 240, 18%, 85%</p>
+                    </div>
+                </div>
+            </div>
+            <h3>White</h3>
+            <div class="wrapper__color">
+                <div class="color">
+                    <div class="white color__container";><span class="color__name dark__text">White</span></div>
+                    <div>
+                        <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #FAFAFA</p>
+                        <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 250, 250, 250</p>
+                        <p class="dark__text"><span class="grey__text">HSL</span> &nbsp; 0, 0%, 98%</p>
+                    </div>
+                </div>
+            </div>  
+        </section>
+          <!-- Typography -->
+        <section>
+            <h2><span class="section__number">02</span> Typography</h2> 
+            <div class="wrapper__typo">
+                <div>
+                    <div>
+                        <p class="text-preset-title">Text Preset 1 - Red Hat Display Black</p>
+                        <p class="text-preset-data">64px - 110% Line Height - 0px Letter Spacing</p>
+                        <hr>
+                        <p class="text-preset-1">Morbi in semquis dui placerat</p>
+                    </div>
+                    <div>
+                        <p class="text-preset-title">Text Preset 2 - Red Hat Display Black</p>
+                        <p class="text-preset-data">40px - 110% Line Height - 0px Letter Spacing</p>
+                        <hr>
+                        <p class="text-preset-2">Praesent dapibus neque id cursus faucibus tortor</p>
+                    </div>
+                    <div>
+                        <p class="text-preset-title">Text Preset 3 - Red Hat Display Black</p>
+                        <p class="text-preset-data">16px - 110% Line Height - 4px Letter Spacing</p>
+                        <hr>
+                        <p class="text-preset-3">Lorem ipsum dolor sit amet consectetuer</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="text-preset-title">Text Preset 4 - Red Hat Display Mediun</p>
+                        <p class="text-preset-data">18px - 110% Line Height - 0px Letter Spacing</p>
+                        <hr>
+                        <p class="text-preset-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. 
+                            Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. 
+                            Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor
+                            eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.<br/>Sed egestas, ante et vulputate volutpat, 
+                            eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, 
+                            commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at 
+                            felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien 
+                            ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-preset-title">Text Preset 5 - Red Hat Display Black</p>
+                        <p class="text-preset-data">16px - 150% Line Height - 0px Letter Spacing</p>
+                        <hr>
+                        <p class="text-preset-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacing -->
+        <section>
+            <h2><span class="section__number">03</span> Spacing</h2> 
+            <div class="wrapper__space">
+                <div class="spacing-item">
+                    <span>1400</span> &nbsp; <span>112px</span>
+                    <p class="spacing-1400"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>1000</span> &nbsp; <span>80px</span>
+                    <p class="spacing-1000"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>900</span> &nbsp; <span>72px</span>
+                    <p class="spacing-900"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>800</span> &nbsp; <span>64px</span>
+                    <p class="spacing-800"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>700</span> &nbsp; <span>56px</span>
+                    <p class="spacing-700"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>500</span> &nbsp; <span>40px</span>
+                    <p class="spacing-500"></p>
+                 
+                </div>
+                <div class="spacing-item">
+                    <span>400</span> &nbsp; <span>32px</span>
+                    <p class="spacing-400"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>300</span> &nbsp; <span>24px</span>
+                    <p class="spacing-300"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>200</span> &nbsp; <span>16px</span>
+                    <p class="spacing-200"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>100</span> &nbsp; <span>8px</span>
+                    <p class="spacing-100"></p>
+                </div>
+                <div class="spacing-item">
+                    <span>50</span> &nbsp; <span>4px</span>
+                    <p class="spacing-50"></p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2><span class="section__number">04</span> Components</h2> 
+            <div class="wrapper__components">
+                <div class="component">
+                    <img src="./assets/logo.svg" alt="Logo">
+                </div>
+                <div class="component">
+                    <button class="btn__blue text-preset-5">Download <span class="version__blue">v1.3</span></button>
+                </div>
+                <div class="component">
+                    <button class="btn__purple text-preset-5">Download <span class="version__purple">v1.3</span></button>
+                </div>
+                <div class="component">
+                    <div class="section__marker">
+                        <div class="vertical__line"></div>
+                        <div class="number__sign">01</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
