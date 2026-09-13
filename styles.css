@@ -31,10 +31,11 @@ body {
     font-weight: 900;
     background-color: var(--clr-white);
     color: var(--clr-slate-900);
+    overflow-x: hidden;
 }
 
 .text-preset-1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* 4rem */
     line-height: 110%;
     letter-spacing: 0px;
 }
@@ -137,12 +138,22 @@ body {
 }
 
 
+/* MOBILE LAYOUT */
+
 header {
     padding: 3em 5em 0 5em;
 }
 
 .logo {
     margin: auto;
+}
+
+/* solution for the “sides cut off” hero image (includes and body element) */
+.img-hero-mobile {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.35);
 }
 
 .img-hero-desktop-left,
@@ -154,4 +165,28 @@ header {
     display: inline-block;
     text-decoration: none;
     text-align: center;
+    margin-block-start: 1em;
+}
+
+.main-content {
+    display: grid;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-block-start: 4em;
+}
+
+.hero {
+    margin-block-end: 2em;
+}
+
+.hero-content {
+    display: grid;
+    text-align: center;
+    gap: 1.5em;
+    padding-block-start: 3em;
+}
+
+.hero__para {
+    color: var(--clr-slate-600);
 }
