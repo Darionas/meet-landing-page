@@ -159,7 +159,7 @@ header {
 .img-hero-mobile img {
   display: block;
   width: 100%;
-  transform: scale(1.15);
+  transform: scaleX(1.15);
   transform-origin: center;
 }
 
