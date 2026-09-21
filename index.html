@@ -31,8 +31,8 @@
                 <h1 class="text-preset-1">Group chat for everyone</h1>
                 <p class="hero__para text-preset-4">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
                 <div class="hero__product">
-                    <button class="btn__blue text-preset-5">Download<span class="version__blue">&nbsp;&nbsp;v1.3</span></button>
-                    <a class="btn__purple btn__purple--link text-preset-5" href="#">What is it?</a>
+                    <button class="btn btn__blue text-preset-5" type="button">Download<span class="version__blue">&nbsp;&nbsp;v1.3</span></button>
+                    <a class="btn__purple btn__purple--link text-preset-5" href="https://www.frontendmentor.io/">What is it?</a>
                 </div>
             </div>
         </section>
@@ -55,6 +55,13 @@
                 </p>
             </div>
         </section>
+        
+         <!-- The Loading Modal -->
+        <div class="modal">
+            <div class="modal-content">
+                <p>Loading <span class="loader" >.</span><span class="loader" >.</span><span class="loader">.</span></p>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <!-- The Banner Section -->
@@ -63,11 +70,15 @@
             <div class="number__sign">02</div>
         </div>
         <div class="footer__banner">
-            <img class="footer__banner-image" src="./assets/mobile/image-footer.jpg" alt="Footer image">
+            <picture class="footer__banner-image" >
+                <source media="(min-width: 62rem)" srcset="./assets/desktop/image-footer.jpg">
+                <source media="(min-width: 48rem)" srcset="./assets/tablet/image-footer.jpg">
+                <img src="./assets/mobile/image-footer.jpg" alt="">
+            </picture>
             <div class="footer__banner-content">
                 <h2 class="text-preset-2">Experience more together</h2>
                 <p class="text-preset-4">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-                <button class="btn__purple text-preset-5">Download<span class="version__purple">&nbsp;&nbsp;v1.3</span></button>
+                <button class="btn btn__purple btn__purple--footer text-preset-5" type="button" >Download<span class="version__purple">&nbsp;&nbsp;v1.3</span></button>
             </div>
         </div>
 
@@ -77,5 +88,7 @@
             Coded by <a href="https://www.frontendmentor.io/profile/Darionas">Darionas</a>.
         </div>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
