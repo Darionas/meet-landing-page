@@ -340,6 +340,7 @@ header {
     .hero {
         display: grid;
         grid-template-columns: 25% 50% 25%;
+        align-items: start;
         width: 100dvw;
         margin-left: calc(50% - 50dvw);
         overflow: hidden;
@@ -347,13 +348,11 @@ header {
 
     .img-hero-desktop-left {
         display: grid;
-        align-items: center;
         overflow: hidden;
     }
 
     .img-hero-desktop-right {
         display: grid;
-        align-items: center;
         justify-items: end;
         overflow: hidden;
     }
@@ -408,17 +407,19 @@ header {
 }
 
 /* LOADING MODAL */
-.modal {
-    display: none;
+dialog:open {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
+    max-width: none; /* reseting user agent styles for dialog element */
     height: 100vh;
+    max-height: none; /* reseting user agent styles for dialog element */
     background-color: rgba(0, 0, 0, 0.3);
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+    align-content: center;
     z-index: 20;
+    border: none;  /* reseting user agent styles for dialog element */
 }
 
 .modal-content {

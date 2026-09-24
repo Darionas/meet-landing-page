@@ -51,7 +51,7 @@
 
         .wrapper__color {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
             gap: 2rem; 
             padding-block-start: 1rem;
             border-top: 2px solid var(--clr-slate-300);
@@ -145,80 +145,53 @@
             justify-content: space-between; 
         }
 
-        .spacing-1400 {
+        .spacing-bar {
             width: 0;
             height: 4em;
             background-color: var(--clr-slate-300);
+        }
+
+        .spacing-1400 {
             padding-inline: var(--spacing-1400);
         }
 
         .spacing-1000 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-1000);
         }
 
         .spacing-900 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-900);
         }
 
         .spacing-800 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-800);
         }
 
         .spacing-700 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-700);
         }
         
         .spacing-500 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-500);
         }
 
         .spacing-400 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-400);
         }
 
         .spacing-300 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-300);
         }
 
         .spacing-200 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-200);
         }
 
         .spacing-100 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-100);
         }
 
         .spacing-50 {
-            width: 0;
-            height: 4em;
-            background-color: var(--clr-slate-300);
             padding-inline: var(--spacing-50);
         }
 
@@ -251,7 +224,7 @@
 </head>
 <body>
     <header class="header">
-        <img src="assets/logo.svg" alt="Logo">
+        <img src="assets/logo.svg" alt="">
         <h1>Style Guide</h1>
     </header>
     <main>
@@ -261,7 +234,7 @@
             <h3>Cyan</h3>
             <div class="wrapper__color">
                 <div class="color">
-                    <div class="cyan-600 color__container";><span class="color__name light__text">Cyan-600</span></div>
+                    <div class="cyan-600 color__container"><span class="color__name light__text">Cyan-600</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #4D96A9</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 77, 150, 168</p>
@@ -269,7 +242,7 @@
                     </div>
                 </div>
                 <div class="color">
-                    <div class="cyan-300 color__container";><span class="color__name dark__text">Cyan-300</span></div>
+                    <div class="cyan-300 color__container"><span class="color__name dark__text">Cyan-300</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #8FE3F9</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 143, 277, 249</p>
@@ -280,7 +253,7 @@
             <h3>Purple</h3>
             <div class="wrapper__color">
                 <div class="color">
-                    <div class="purple-600 color__container";><span class="color__name light__text">Purple-600</span></div>
+                    <div class="purple-600 color__container"><span class="color__name light__text">Purple-600</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #855FB1</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 133, 95, 177</p>
@@ -288,7 +261,7 @@
                     </div>
                 </div>
                 <div class="color">
-                    <div class="purple-300 color__container";><span class="color__name dark__text">Purple-300</span></div>
+                    <div class="purple-300 color__container"><span class="color__name dark__text">Purple-300</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #D9B8FF</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 217, 184, 255</p>
@@ -299,7 +272,7 @@
              <h3>Slate</h3>
             <div class="wrapper__color">
                 <div class="color">
-                    <div class="slate-900 color__container";><span class="color__name light__text">Slate-900</span></div>
+                    <div class="slate-900 color__container"><span class="color__name light__text">Slate-900</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #28283D</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 40, 40, 61</p>
@@ -307,7 +280,7 @@
                     </div>
                 </div>
                 <div class="color">
-                    <div class="slate-600 color__container";><span class="color__name light__text">Slate-600</span></div>
+                    <div class="slate-600 color__container"><span class="color__name light__text">Slate-600</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #87879D</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 135, 135, 157</p>
@@ -315,7 +288,7 @@
                     </div>
                 </div>
                 <div class="color">
-                    <div class="slate-300 color__container";><span class="color__name dark__text">Slate-300</span></div>
+                    <div class="slate-300 color__container"><span class="color__name dark__text">Slate-300</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #D1D1DF</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 209, 209, 223</p>
@@ -326,7 +299,7 @@
             <h3>White</h3>
             <div class="wrapper__color">
                 <div class="color">
-                    <div class="white color__container";><span class="color__name dark__text">White</span></div>
+                    <div class="white color__container"><span class="color__name dark__text">White</span></div>
                     <div>
                         <p class="dark__text"><span class="grey__text">HEX</span> &nbsp; #FAFAFA</p>
                         <p class="dark__text"><span class="grey__text">RGB</span> &nbsp; 250, 250, 250</p>
@@ -390,48 +363,48 @@
             <div class="wrapper__space">
                 <div class="spacing-item">
                     <span>1400</span> &nbsp; <span>112px</span>
-                    <p class="spacing-1400"></p>
+                    <p class="spacing-1400 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>1000</span> &nbsp; <span>80px</span>
-                    <p class="spacing-1000"></p>
+                    <p class="spacing-1000 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>900</span> &nbsp; <span>72px</span>
-                    <p class="spacing-900"></p>
+                    <p class="spacing-900 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>800</span> &nbsp; <span>64px</span>
-                    <p class="spacing-800"></p>
+                    <p class="spacing-800 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>700</span> &nbsp; <span>56px</span>
-                    <p class="spacing-700"></p>
+                    <p class="spacing-700 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>500</span> &nbsp; <span>40px</span>
-                    <p class="spacing-500"></p>
+                    <p class="spacing-500 spacing-bar"></p>
                  
                 </div>
                 <div class="spacing-item">
                     <span>400</span> &nbsp; <span>32px</span>
-                    <p class="spacing-400"></p>
+                    <p class="spacing-400 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>300</span> &nbsp; <span>24px</span>
-                    <p class="spacing-300"></p>
+                    <p class="spacing-300 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>200</span> &nbsp; <span>16px</span>
-                    <p class="spacing-200"></p>
+                    <p class="spacing-200 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>100</span> &nbsp; <span>8px</span>
-                    <p class="spacing-100"></p>
+                    <p class="spacing-100 spacing-bar"></p>
                 </div>
                 <div class="spacing-item">
                     <span>50</span> &nbsp; <span>4px</span>
-                    <p class="spacing-50"></p>
+                    <p class="spacing-50 spacing-bar"></p>
                 </div>
             </div>
         </section>

@@ -1,18 +1,21 @@
 'use strict';
 
-const buttons = document.querySelectorAll('.btn');
+const buttons = document.querySelectorAll('.show');
 const loader = document.querySelectorAll('.loader');
-const modal = document.querySelector('.modal');
+const modal = document.getElementById('my-dialog');
+const previousFocus = document.activeElement;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        modal.style.display = 'flex';
+        modal.showModal();
+        modal.focus();
         loader.forEach((dot) => {
             dot.classList.add('loading');
         });
 
         setTimeout(() => {
-            modal.style.display = 'none';
+            modal.close();
+            previousFocus.focus();
         }, 5000);
     });
 });
