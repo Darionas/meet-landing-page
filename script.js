@@ -19,3 +19,4 @@ buttons.forEach((button) => {
         }, 5000);
     });
 });
+

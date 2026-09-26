@@ -153,7 +153,8 @@ body {
 
 /* MOBILE LAYOUT */
 header {
-    padding: 3em 5em 0 5em;
+    padding-block: var(--spacing-700) 0;
+    padding-inline: var(--spacing-1000);
 }
 
 .logo {
@@ -183,7 +184,7 @@ header {
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    margin-block-start: 1em;
+    margin-block-start: var(--spacing-200);
 }
 
 .main-content {
@@ -193,11 +194,11 @@ header {
     min-width: 0;
     justify-self: center;
     margin: 0 auto;
-    padding-block-start: 4em;
+    padding-block-start: var(--spacing-800);
 }
 
 .hero {
-    margin-block-end: 2em;
+    margin-block-end: var(--spacing-400);
 }
 
 .hero-content {
@@ -207,7 +208,7 @@ header {
     justify-self: center;
     align-content: center;
     gap: 1.5em;
-    padding-block-start: 3em;
+    padding-block-start: var(--spacing-700);
 }
 
 .hero__para {
@@ -221,13 +222,13 @@ header {
     align-items: center;
     min-width: 0;
     gap: 1em;
-    padding-block: .5em;
+    padding-block: var(--spacing-100);
 }
 
 .meetings {
     display: grid;
     gap: 4em;
-    margin-block: 2em 4em;
+    margin-block: var(--spacing-400) var(--spacing-800);
 }
 
 .image__container {
@@ -250,7 +251,7 @@ header {
 }
 
 .meetings__title {
-    margin-block: .5em 1em;
+    margin-block: var(--spacing-100) var(--spacing-200);
 }
 
 .meetings__features {
@@ -294,11 +295,11 @@ header {
     z-index: 1;
     display: grid;
     justify-items: center;
-    gap: 1.5em;
+    gap: var(--spacing-300);
     width: 85%;
     max-width: 500px;
     margin: 0 auto;
-    padding-block: 4em;
+    padding-block: var(--spacing-800);
     color: var(--clr-white);
 }
 
@@ -387,7 +388,7 @@ header {
     }
 
     .image__container {
-        gap: 2em;
+        gap: var(--spacing-400);
         justify-items: center;
         margin: 0 auto;
     }
@@ -398,7 +399,7 @@ header {
 
     .footer__banner-content {
         grid-template-columns: repeat(3, 1fr);
-        gap: 2em;
+        gap: var(--spacing-400);
         align-items: start;
         margin-inline: auto;
         max-width: 1300px;
@@ -424,7 +425,7 @@ dialog:open {
 
 .modal-content {
     background-color: white;
-    padding: 1em 2em;
+    padding: var(--spacing-200) var(--spacing-400);
     border-radius: 30px;
     max-width: 10rem;
     width: 100%;
